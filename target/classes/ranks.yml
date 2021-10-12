@@ -1,0 +1,82 @@
+owner:
+  priority: 0
+  tab-prefix: "&c"
+  chat-prefix: "&c&lOWNER &c"
+  display-name: "&cOwner"
+  permissions:
+    - "*"
+
+dev:
+  priority: 1
+  tab-prefix: "&c"
+  chat-prefix: "&c&lDEV &c"
+  display-name: "&cDev"
+  permissions:
+    - "*"
+
+admin:
+  priority: 2
+  tab-prefix: "&c"
+  chat-prefix: "&c&lADMIN &c"
+  display-name: "&cAdmin"
+  permissions:
+    - "*"
+
+srmod:
+  priority: 3
+  tab-prefix: "&d"
+  chat-prefix: "&d&lSR.MOD &d"
+  display-name: "&dSenior Mod"
+  children:
+    - mod
+  permissions:
+    - "nautilus.srmod"
+
+mod:
+  priority: 4
+  tab-prefix: "&d"
+  chat-prefix: "&d&lMOD &d"
+  display-name: "&dMod"
+  children:
+    - helper
+  permissions:
+    - "nautilus.mod"
+
+helper:
+  priority: 5
+  tab-prefix: "&d"
+  chat-prefix: "&d&lHELPER &d"
+  display-name: "&dHelper"
+  children:
+    - donator
+  permissions:
+    - "nautilus.helper"
+
+elite:
+  priority: 6
+  tab-prefix: "&b"
+  chat-prefix: "&b&lElite &b"
+  display-name: "&bElite"
+  children:
+    - donator
+  permissions:
+    - "nautilus.elite"
+
+donator:
+  priority: 7
+  tab-prefix: "&a"
+  chat-prefix: "&a&lDonor &a"
+  display-name: "&aDonator"
+  children:
+    - default
+  permissions:
+    - "nautilus.donator"
+
+default:
+  default: true
+  priority: 8
+  tab-prefix: "&9"
+  chat-prefix: "&9"
+  display-name: "&9Default"
+  permissions:
+    - "nautilus.default"
