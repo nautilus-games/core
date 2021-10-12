@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class RankCommand {
+public final class RankCommand {
 
     private final Nautilus core;
 
@@ -47,11 +47,9 @@ public class RankCommand {
         int[] indexes = new int[] { 28, 29, 30, 31, 32, 33, 34, 37, 38, 39, 40, 41, 42, 43 };
 
         List<Rank> ranksInPage = new ArrayList<>();
-        for (int i = page * indexes.length; i < (Math.min(ranks.size() - (page * indexes.length), ((page * indexes.length) + indexes.length))); i++) {
+        for (int i = page * indexes.length; i < (Math.min(ranks.size() - (page * indexes.length), page * indexes.length)) + indexes.length; i++) {
             ranksInPage.add(ranks.get(i));
         }
-        System.out.println(ranksInPage.size());
-        System.out.println(indexes.length);
 
         Menu menu = new Menu(core, "Rank Editor", 6);
         ShapedMenuPattern pattern = new ShapedMenuPattern(
